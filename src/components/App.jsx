@@ -1,11 +1,12 @@
 import React from 'react';
 
-import './App.css'
+import './style.css';
+import Main from '../Pages/Main';
 
 const App = () => {
     return (
         <div>
-            <h1 className='app'>Здесь скоро будет Skypro. Music</h1>
+            <Main />
         </div>
     );
 }
