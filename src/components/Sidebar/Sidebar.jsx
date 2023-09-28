@@ -1,8 +1,6 @@
 import React from "react";
 
-import img1 from '../../static/img/playlist01.png'
-import img2 from '../../static/img/playlist02.png'
-import img3 from '../../static/img/playlist03.png'
+import "./style.css";
 
 const Sidebar = () => {
     return (
@@ -22,7 +20,7 @@ const Sidebar = () => {
                   <a className="sidebar__link" href="#">
                     <img
                       className="sidebar__img"
-                      src={img1}
+                      src="/public/img/playlist01.png"
                       alt="day's playlist"
                     />
                   </a>
@@ -31,7 +29,7 @@ const Sidebar = () => {
                   <a className="sidebar__link" href="#">
                     <img
                       className="sidebar__img"
-                      src={img2}
+                      src="/public/img/playlist02.png"
                       alt="day's playlist"
                     />
                   </a>
@@ -40,7 +38,7 @@ const Sidebar = () => {
                   <a className="sidebar__link" href="#">
                     <img
                       className="sidebar__img"
-                      src={img3}
+                      src="/public/img/playlist03.png"
                       alt="day's playlist"
                     />
                   </a>

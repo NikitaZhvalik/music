@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.css";
+
 const AudioPlayer = () => {
     return (
         <div className="bar">
@@ -44,8 +46,7 @@ const AudioPlayer = () => {
                     </div>
                     <div className="track-play__author">
                       <a className="track-play__author-link" href="http://"
-                        >Ты та...</a
-                      >
+                        >Ты та...</a>
                     </div>
                     <div className="track-play__album">
                       <a className="track-play__album-link" href="http://">Баста</a>
