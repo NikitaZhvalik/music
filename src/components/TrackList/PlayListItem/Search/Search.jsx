@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./style.css";
+
 const Search = () => {
     return (
             <div className="centerblock__search search">

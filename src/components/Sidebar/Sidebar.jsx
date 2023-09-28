@@ -1,5 +1,6 @@
 import React from "react";
 
+import imgs from "./const.js";
 import "./style.css";
 
 const Sidebar = () => {
@@ -16,33 +17,19 @@ const Sidebar = () => {
             </div>
             <div className="sidebar__block">
               <div className="sidebar__list">
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src="/public/img/playlist01.png"
-                      alt="day's playlist"
-                    />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src="/public/img/playlist02.png"
-                      alt="day's playlist"
-                    />
-                  </a>
-                </div>
-                <div className="sidebar__item">
-                  <a className="sidebar__link" href="#">
-                    <img
-                      className="sidebar__img"
-                      src="/public/img/playlist03.png"
-                      alt="day's playlist"
-                    />
-                  </a>
-                </div>
+                {imgs.map((img) => {
+                  return (
+                    <div key={img.id} className="sidebar__item">
+                      <a className="sidebar__link" href="#">
+                        <img
+                          className="sidebar__img"
+                          src={img.src}
+                          alt={img.alt}
+                        />
+                      </a>
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>

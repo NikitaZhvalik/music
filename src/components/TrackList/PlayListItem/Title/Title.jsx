@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "./style.css";
+
 const Title = ({ title, span }) => {
     return (
         <div className="track__title">

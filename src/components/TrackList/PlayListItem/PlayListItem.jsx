@@ -5,6 +5,8 @@ import Author from "./Author/Authir";
 import Album from "./Album/Album";
 import TrackTime from "./TrackTime/TrackTime";
 
+import "./style.css"
+
 const PlayListItem = ({ data }) => {
     const { title, span, author, album, time } = data
 

@@ -2,6 +2,8 @@ import React from "react";
 
 import filters from "./const";
 
+import "./style.css"
+
 const Filter = () => {
     return (
         <div className="centerblock__filter filter">

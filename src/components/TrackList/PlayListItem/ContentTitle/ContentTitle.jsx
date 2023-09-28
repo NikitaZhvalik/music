@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.css";
+
 const ContentTitle = () => {
     return (
         <div className="content__title playlist-title">
