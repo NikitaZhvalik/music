@@ -21,5 +21,6 @@
 }
 
 .filter__button_active {
-    color: red;
+    color: #AD61FF;
+    border-color: #AD61FF;
 }

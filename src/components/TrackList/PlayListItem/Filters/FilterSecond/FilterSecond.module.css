@@ -4,7 +4,7 @@
 }
 
 .model__ul {
-    overflow: scroll;
+    /* overflow-y: scroll; */
     width: 248px;
     height: 200px;
     padding: 34px;

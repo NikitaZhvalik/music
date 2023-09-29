@@ -44,6 +44,19 @@ body {
     color: #ffffff;
 }
 
+/*? полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 0;
+    background-color: #4B4949;
+}
+
+/*? ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
 .wrapper {
     width: 100%;
     min-height: 100%;

@@ -17,6 +17,8 @@ const FilterFirst = () => {
                         <li className={style.model__li}>model</li>
                         <li className={style.model__li}>model</li>
                         <li className={style.model__li}>model</li>
+                        <li className={style.model__li}>model</li>
+                        <li className={style.model__li}>model</li>
                     </ul>
                 </div>
         </div>

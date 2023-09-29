@@ -27,16 +27,18 @@ const Filters = () => {
     setPopSecond(false)
     setPopThird(!popThird)
   }
+
+  const btnClassName = "filter__button button-genre _btn-text"
   
   return (
     <div className="centerblock__filter filter">
       <div className="filter__title">Искать по:</div>
       {popFirst && <FilterFirst />}
-      <div onClick={modelFirst} className="filter__button button-genre _btn-text">исполнителю</div>
+      <div onClick={modelFirst} className={popFirst ? btnClassName + " filter__button_active" : btnClassName}>исполнителю</div>
       {popSecond && <FilterSecond />}
-      <div onClick={modelSecond} className="filter__button button-genre _btn-text">году выпуска</div>
+      <div onClick={modelSecond} className={popSecond ? btnClassName + " filter__button_active" : btnClassName}>году выпуска</div>
       {popThird && <FilterThird /> }
-      <div onClick={modelThird} className="filter__button button-genre _btn-text">жанру</div>
+      <div onClick={modelThird} className={popThird ? btnClassName + " filter__button_active" : btnClassName}>жанру</div>
     </div>
   )
 }
