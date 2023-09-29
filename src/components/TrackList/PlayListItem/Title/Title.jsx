@@ -3,26 +3,25 @@ import PropTypes from "prop-types";
 
 import "./style.css";
 
-const Title = ({ title, span }) => {
+const Title = ({ title, span, isLoading }) => {
     return (
         <div className="track__title">
             <div className="track__title-image">
                 <svg className="track__title-svg" alt="music">
-                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                    {isLoading ? "" : <use xlinkHref="img/icon/sprite.svg#icon-note"></use>}
                 </svg>
             </div>
             <div className="track__title-text">
-                <a className="track__title-link" href="http://">
-                    {title} <span className="track__title-span">{span}</span>
-                </a>
+                 {isLoading ? <div className="skeleton__title"></div> : <a className="track__title-link" href="http://">{title} <span className="track__title-span">{span}</span></a>}   
             </div>
         </div>
     )
 }
 
 Title.propTypes = {
-  title: PropTypes.string.isRequired,
-  span: PropTypes.string
+    isLoading: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    span: PropTypes.string
 }
 
 export default Title;

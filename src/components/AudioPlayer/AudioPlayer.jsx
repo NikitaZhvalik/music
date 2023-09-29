@@ -1,9 +1,10 @@
 import React from "react";
 import {iconsPlayer, iconsLiked} from "./const";
+import PropTypes from 'prop-types';
 
 import "./style.css";
 
-const AudioPlayer = () => {
+const AudioPlayer = ({isLoading}) => {
     return (
         <div className="bar">
           <div className="bar__content">
@@ -24,17 +25,18 @@ const AudioPlayer = () => {
 
                 <div className="player__track-play track-play">
                   <div className="track-play__contain">
-                    <div className="track-play__image">
-                      <svg className="track-play__svg" alt="music">
-                        <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
-                      </svg>
-                    </div>
+                        <div className="track-play__image">
+                        {isLoading ? '' : 
+                            <svg className="track-play__svg" alt="music">
+                              <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                            </svg>
+                        }
+                        </div>
                     <div className="track-play__author">
-                      <a className="track-play__author-link" href="http://"
-                        >Ты та...</a>
+                      {isLoading ? <div className="skeleton__audioPlayer"></div> : <a className="track-play__author-link" href="http://">Ты та...</a>}
                     </div>
                     <div className="track-play__album">
-                      <a className="track-play__album-link" href="http://">Баста</a>
+                      {isLoading ? <div className="skeleton__audioPlayer"></div> : <a className="track-play__album-link" href="http://">Баста</a>}
                     </div>
                   </div>
 
@@ -73,4 +75,9 @@ const AudioPlayer = () => {
     )
 }
  
+
+AudioPlayer.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+}
+
 export default AudioPlayer;

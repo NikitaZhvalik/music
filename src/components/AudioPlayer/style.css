@@ -298,3 +298,9 @@
 .volume__progress-line {
     width: 109px;
 }
+
+.skeleton__audioPlayer {
+    width: 59px;
+    height: 15px;
+    background: #313131;
+}

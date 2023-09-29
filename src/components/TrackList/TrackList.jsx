@@ -7,8 +7,9 @@ import Search from "./PlayListItem/Search/Search";
 import PlayListMusic from "./const"
 import Filter from "./PlayListItem/Filter/Filter";
 import ContentTitle from "./PlayListItem/ContentTitle/ContentTitle";
+import PropTypes from 'prop-types';
 
-const TrackList = () => {
+const TrackList = ({isLoading}) => {
     return (
         <div>
           <div className="main__centerblock centerblock">
@@ -20,12 +21,16 @@ const TrackList = () => {
               <ContentTitle />
 
               <div className="content__playlist playlist">
-                {PlayListMusic.map((data) => <PlayListItem key={data.id} data={data}/>)}
+                {PlayListMusic.map((data) => <PlayListItem key={data.id} data={data} isLoading={isLoading}/>)}
               </div>
             </div>
           </div>
         </div>
     )
+}
+
+TrackList.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
 }
  
 export default TrackList;
