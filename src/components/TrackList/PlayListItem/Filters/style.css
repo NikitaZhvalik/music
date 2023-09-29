@@ -19,3 +19,7 @@
     line-height: 24px;
     margin-right: 15px;
 }
+
+.filter__button_active {
+    color: red;
+}

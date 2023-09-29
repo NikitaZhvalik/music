@@ -5,7 +5,7 @@ import PlayListItem from "./PlayListItem/PlayListItem";
 import Search from "./PlayListItem/Search/Search";
 
 import PlayListMusic from "./const"
-import Filter from "./PlayListItem/Filter/Filter";
+import Filters from "./PlayListItem/Filters/Filters";
 import ContentTitle from "./PlayListItem/ContentTitle/ContentTitle";
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,7 @@ const TrackList = ({isLoading}) => {
           <div className="main__centerblock centerblock">
             <Search />
             <h2 className="centerblock__h2">Треки</h2>
-            <Filter />
+            <Filters />
 
             <div className="centerblock__content">
               <ContentTitle />

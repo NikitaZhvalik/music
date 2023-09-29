@@ -1,0 +1,28 @@
+.model {
+    position: absolute;
+    margin-top: 30px;
+}
+
+.model__ul {
+    overflow: scroll;
+    width: 248px;
+    height: 305px;
+    padding: 34px;
+    border-radius: 12px;
+    background: #313131;
+}
+
+.model__li {
+    position: relative;
+    transition: all ease-in .2s;
+}
+
+.model__li:hover {
+    color: #B672FF;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.model__li + .model__li {
+    margin-top: 28px;
+}
