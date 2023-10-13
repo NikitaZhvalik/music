@@ -1,46 +1,34 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import "./style.css"
+import "./style.css";
 import FilterFirst from "./FilterFirst/FilterFirst";
 import FilterSecond from "./FilterSecond/FilterSecond";
-import FilterThird from "./FilterThird/FilterThird"
+import FilterThird from "./FilterThird/FilterThird";
 
 const Filters = () => {
-  const [popFirst, setPopFirst] = useState(false)
-  const [popSecond, setPopSecond]= useState(false)
-  const [popThird, setPopThird] = useState(false)
+	const [filter, setFilter] = useState(null)
 
-  const modelFirst = () => {
-    setPopFirst(!popFirst)
-    setPopSecond(false)
-    setPopThird(false)
-  }
+	const handleClick = (value) => filter === value ? setFilter(null) : setFilter(value)
 
-  const modelSecond = () => {
-    setPopFirst(false)
-    setPopSecond(!popSecond)
-    setPopThird(false)
-  }
+	const btnClassName = "filter__button button-genre _btn-text"
+	const activeBtnClassName = btnClassName + " filter__button_active"
 
-  const modelThird = () => {
-    setPopFirst(false)
-    setPopSecond(false)
-    setPopThird(!popThird)
-  }
-
-  const btnClassName = "filter__button button-genre _btn-text"
-  
-  return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
-      {popFirst && <FilterFirst />}
-      <div onClick={modelFirst} className={popFirst ? btnClassName + " filter__button_active" : btnClassName}>исполнителю</div>
-      {popSecond && <FilterSecond />}
-      <div onClick={modelSecond} className={popSecond ? btnClassName + " filter__button_active" : btnClassName}>году выпуска</div>
-      {popThird && <FilterThird /> }
-      <div onClick={modelThird} className={popThird ? btnClassName + " filter__button_active" : btnClassName}>жанру</div>
-    </div>
-  )
+	return (
+		<div className="centerblock__filter filter">
+			<div className="filter__title">Искать по:</div>
+			{filter === "authors" && <FilterFirst />}
+			<div onClick={() => handleClick("authors")} className={filter === "authors" ? activeBtnClassName : btnClassName}>
+				исполнителю
+			</div>{filter === "date" && <FilterSecond />}
+			<div onClick={() => handleClick("date")} className={filter === "date" ? activeBtnClassName : btnClassName}>
+				году выпуска
+			</div>
+			{filter === "genres" && <FilterThird />}
+			<div onClick={() => handleClick("genres")} className={filter === "genres" ? activeBtnClassName : btnClassName}>
+				жанру
+			</div>
+		</div>
+	)
 }
- 
+
 export default Filters;
