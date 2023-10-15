@@ -1,14 +1,13 @@
 import React from 'react';
 
+import RoutesApp from '../routes';
+
 import './global.css';
-import Main from '../Pages/Main';
 
 const App = () => {
     return (
-        <div>
-            <Main />
-        </div>
-    );
+         <RoutesApp />
+    )
 }
  
 export default App;
