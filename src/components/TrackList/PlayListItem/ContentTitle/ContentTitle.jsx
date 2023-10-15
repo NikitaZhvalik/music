@@ -5,11 +5,11 @@ import style from './style.module.css'
 const ContentTitle = () => {
   return (
     <div className={style.title}>
-      <div className={`${style.col} ${style.col1}`}>Трек</div>
-      <div className={`${style.col} ${style.col2}`}>ИСПОЛНИТЕЛЬ</div>
-      <div className={`${style.col} ${style.col3}`}>АЛЬБОМ</div>
+      <div className={`${style.col} ${style.col01}`}>Трек</div>
+      <div className={`${style.col} ${style.col02}`}>ИСПОЛНИТЕЛЬ</div>
+      <div className={`${style.col} ${style.col03}`}>АЛЬБОМ</div>
 
-      <div className={`${style.col} ${style.col4}`}>
+      <div className={`${style.col} ${style.col04}`}>
         <svg className={style.svg} alt="time">
           <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
         </svg>
