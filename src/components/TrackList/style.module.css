@@ -1,4 +1,4 @@
-.centerblock__h2 {
+.subtitle {
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
@@ -7,7 +7,7 @@
     margin-bottom: 45px;
 }
 
-.centerblock__content {
+.content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -30,33 +30,4 @@
 
 .filter__button:not(:last-child) {
     margin-right: 10px;
-}
-
-.col01 {
-    width: 447px;
-}
-
-.col02 {
-    width: 321px;
-}
-
-.col03 {
-    width: 245px;
-}
-
-.col04 {
-    width: 60px;
-    text-align: end;
-}
-
-.track__album {
-    width: 245px;
-}
-
-.track__album-link {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #696969;
 }

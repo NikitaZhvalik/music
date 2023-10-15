@@ -1,4 +1,10 @@
-.centerblock__filter {
+.item {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.track {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6,21 +12,10 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 51px;
-}
-
-.filter__title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 15px;
-}
-
-.filter__button_active {
-    color: #AD61FF;
-    border-color: #AD61FF;
 }

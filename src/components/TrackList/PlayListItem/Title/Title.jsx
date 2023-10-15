@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./style.css";
+import style from "./style.module.css"
 
 const Title = ({ title, span, isLoading }) => {
     return (
-        <div className="track__title">
-            <div className="track__title-image">
-                <svg className="track__title-svg" alt="music">
+        <div className={style.title}>
+            <div className={style.image}>
+                <svg className={style.svg} alt="music">
                     {isLoading ? "" : <use xlinkHref="img/icon/sprite.svg#icon-note"></use>}
                 </svg>
             </div>
-            <div className="track__title-text">
-                 {isLoading ? <div className="skeleton__title"></div> : <a className="track__title-link" href="http://">{title} <span className="track__title-span">{span}</span></a>}   
+            <div className={style.text}>
+                 {isLoading ? <div className={style.skeleton}></div> : <a className={style.link} href="http://">{title} <span className="track__title-span">{span}</span></a>}   
             </div>
         </div>
     )

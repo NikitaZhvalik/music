@@ -1,4 +1,4 @@
-.track__time-svg {
+.svg {
     width: 14px;
     height: 12px;
     margin-right: 17px;
@@ -6,7 +6,7 @@
     stroke: #696969;
 }
 
-.track__time-text {
+.text {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

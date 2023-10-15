@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./style.css";
+import style from "./style.module.css"
 
 const Album = ({album, isLoading}) => {
     return (
-        <div className="track__album">
-            {isLoading ? <div className="skeleton__album"></div> : <a className="track__album-link" href="http://">{album}</a>}
+        <div className={style.album}>
+            {isLoading ? <div className={style.skeleton}></div> : <a className={style.link} href="http://">{album}</a>}
         </div>
     )
 }
