@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import NavMenu from "../components/NavMenu/NavMenu";
-import TrackList from "../components/TrackList/TrackList";
-import Sidebar from "../components/Sidebar/Sidebar";
-import AudioPlayer from "../components/AudioPlayer/AudioPlayer";
-import Footer from "../components/Footer/Footer";
+import NavMenu from "../NavMenu/NavMenu";
+import TrackList from "../TrackList/TrackList";
+import Sidebar from "../Sidebar/Sidebar";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
+import Footer from "../Footer/Footer";
 
 const Main = () => {
     const [isLoading, setIsLoading] = useState(true)
