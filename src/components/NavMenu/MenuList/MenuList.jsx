@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 import style from "./style.module.css"
 
@@ -9,13 +10,19 @@ const MenuList = ({show}) => {
                   <div className={style.nav}>
                   <ul className={style.list}>
                       <li className={style.item}>
-                        <a href="#" className={style.link}>Главное</a>
+                        <Link className={style.link} to='/'>
+                          Главное
+                        </Link>
                       </li>
                       <li className={style.item}>
-                        <a href="#" className={style.link}>Мой плейлист</a>
+                        <Link className={style.link} to='/favorites'>
+                          Мой плейлист
+                        </Link>
                       </li>
                       <li className={style.item}>
-                        <a href="#" className={style.link}>Войти</a>
+                        <Link className={style.link} to='/'>
+                          Войти
+                        </Link>
                       </li>
                   </ul>
                 </div> 
