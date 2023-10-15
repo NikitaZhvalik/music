@@ -17,7 +17,7 @@ const BurgerIcon = ({show, setShow}) => {
 
 BurgerIcon.propTypes = {
     show: PropTypes.bool.isRequired,
-    setShow: PropTypes.bool.isRequired,
+    setShow: PropTypes.func.isRequired,
 }
  
 export default BurgerIcon;
