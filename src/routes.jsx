@@ -14,13 +14,11 @@ const RoutesApp = () => {
             <Route path="/login" element={<SignInPage />}/>
             <Route path="/register" element={<SignUp />}/>
 
-
-            <Route element={<ProtectedRoute isAllowed={localStorage.getItem('user')} redirectPath={"/login"} />}>
+            <Route element={<ProtectedRoute isAllowed={localStorage.getItem('user') ? true : false} redirectPath={"/login"} />}>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/favorites" element={<FavoritesPage />}/>
                 <Route path="/category/:id" element={<CategoryPage />}/>
             </Route>
-
 
             <Route path="*" element={<NotFoundPage />}/>
         </Routes>
