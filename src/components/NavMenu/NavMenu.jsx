@@ -1,39 +1,22 @@
 import React, { useState } from "react";
 
-import "./style.css"
-import menuItem from "./const.js"
+// import "./style.css"
+
+import BurgerIcon from "./BurgerIcon/BurgerIcon";
+import Logo from "./Logo/Logo";
+import MenuList from "./MenuList/MenuList";
+
+import style from "./style.module.css"
 
 const NavMenu = () => {
-
     const [show, setShow] = useState(true)
-    const toggleShow = () => setShow(!show)
 
     return (
         <div>
-          <nav className="main__nav nav">
-            <div className="nav__logo logo">
-              <img className="logo__image" src="/img/navBar/logo.png" alt="logo" />
-            </div>
-            <div onClick={toggleShow} className="nav__burger burger">
-              <span className="burger__line"></span>
-              <span className="burger__line"></span>
-              <span className="burger__line"></span>
-            </div>
-            {
-              show ?             
-                    <div className="nav__menu menu">
-                    <ul className="menu__list">
-                    {menuItem.map((item) => {
-                      return (
-                        <li key={item.name} className="menu__item">
-                          <a href={item.link} className="menu__link">{item.name}</a>
-                        </li>
-                      )
-                    })}
-                    </ul>
-                  </div> 
-              : ''
-            }
+          <nav className={style.main}>
+            <Logo />
+            <BurgerIcon show={show} setShow={setShow}/>
+            <MenuList show={show}/>
           </nav>
         </div>
     )

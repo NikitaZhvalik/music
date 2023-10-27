@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react'
 
-import "./style.css";
+import style from './style.module.css'
 
 const ContentTitle = () => {
-    return (
-        <div className="content__title playlist-title">
-        <div className="playlist-title__col col01">Трек</div>
-        <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-        <div className="playlist-title__col col03">АЛЬБОМ</div>
+  return (
+    <div className={style.title}>
+      <div className={`${style.col} ${style.col01}`}>Трек</div>
+      <div className={`${style.col} ${style.col02}`}>ИСПОЛНИТЕЛЬ</div>
+      <div className={`${style.col} ${style.col03}`}>АЛЬБОМ</div>
 
-        <div className="playlist-title__col col04">
-          <svg className="playlist-title__svg" alt="time">
-            <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
-          </svg>
-        </div>
+      <div className={`${style.col} ${style.col04}`}>
+        <svg className={style.svg} alt="time">
+          <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
+        </svg>
       </div>
-    );
+    </div>
+  )
 }
- 
-export default ContentTitle;
+
+export default ContentTitle

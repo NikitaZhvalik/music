@@ -1,4 +1,4 @@
-.track__title {
+.title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12,7 +12,7 @@
     width: 447px;
 }
 
-.track__title-image {
+.image {
     width: 51px;
     height: 51px;
     padding: 16px;
@@ -29,14 +29,14 @@
     margin-right: 17px;
 }
 
-.track__title-svg {
+.svg {
     width: 18px;
     height: 17px;
     fill: transparent;
     stroke: #4e4e4e;
 }
 
-.track__title-link {
+.link {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -44,7 +44,7 @@
     color: #ffffff;
 }
 
-.track__title-span {
+.span {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -52,7 +52,7 @@
     color: #4e4e4e;
 }
 
-.skeleton__title {
+.skeleton {
     width: 240px;
     height: 19px;
     background: #313131;

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./style.css";
+import style from  "./style.module.css"
 
 const Author = ({author, isLoading}) => {
     return (
-      <div className="track__author">
-        {isLoading ? <div className="skeleton__author"></div> : <a className="track__author-link" href="http://">{author}</a>}   
+      <div className={style.author}>
+        {isLoading ? <div className={style.skeleton}></div> : <a className={style.link} href="http://">{author}</a>}   
       </div>
     )
 }

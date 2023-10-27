@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./style.css";
+import style from "./style.module.css"
 
 const TrackTime = ({time, isLoading}) => {
     return (
-        <div className="track__time">
-            <svg className="track__time-svg" alt="time">
+        <div className={style.time}>
+            <svg className={style.svg} alt="time">
             <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
             </svg>
-            <span className="track__time-text">{isLoading ? '00:00' : time}</span>
+            <span className={style.text}>{isLoading ? '00:00' : time}</span>
         </div>
     )
 }

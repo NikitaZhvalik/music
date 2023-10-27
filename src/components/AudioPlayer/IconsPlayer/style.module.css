@@ -1,0 +1,92 @@
+.controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 27px 0 31px;
+}
+
+.prev,
+.play,
+.next,
+.repeat,
+.shuffle {
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.prev {
+    margin-right: 23px;
+}
+
+.prevSvg {
+    width: 15px;
+    height: 14px;
+}
+
+.play {
+    margin-right: 23px;
+}
+
+.playSvg {
+    width: 22px;
+    height: 20px;
+    fill: #d9d9d9;
+}
+
+.next {
+    margin-right: 28px;
+    fill: #a53939;
+}
+
+.nextSvg {
+    width: 15px;
+    height: 14px;
+    fill: inherit;
+    stroke: #d9d9d9;
+}
+
+.repeat {
+    margin-right: 24px;
+}
+
+.repeatSvg {
+    width: 18px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+}
+
+.shuffle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.shuffleSvg {
+    width: 19px;
+    height: 12px;
+    fill: transparent;
+    stroke: #696969;
+}
+
+.trackPlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
