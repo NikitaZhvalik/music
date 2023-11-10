@@ -1,9 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
+import Cookies from 'js-cookie';
 
 import style from "./style.module.css"
 
 const SignIn = () => {
+  const navigate = useNavigate()
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    Cookies.set('user', 'login', { expires: 7 })
+    navigate('/')
+  }
+
     return (
         <div className={style.wrapper}>
         <div className={style.container}>
@@ -26,9 +36,9 @@ const SignIn = () => {
                 name="password"
                 placeholder="Пароль"
               />
-              <NavLink className={style.enter} to="/">
-                Войти              
-              </NavLink>
+              <button onClick={handleClick} className={style.enter}>
+                Войти
+              </button>
               <NavLink className={style.signup} to="/register">
                 Зарегистрироваться              
               </NavLink>
