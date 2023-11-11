@@ -3,15 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 import style from "./style.module.css"
 
-const deleteCookie = (name) => {
-    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
-}
-
 const SignIn = () => {
     const navigate = useNavigate()
 
     const handleClick = useCallback(() => {
-        deleteCookie('user')
+        localStorage.removeItem('user')
         navigate('/login')
     }, [navigate])
 
