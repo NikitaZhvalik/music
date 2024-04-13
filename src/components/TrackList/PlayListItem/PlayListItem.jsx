@@ -7,13 +7,13 @@ import TrackTime from "./TrackTime/TrackTime";
 
 import style from "./style.module.css"
 
-const PlayListItem = ({ data, isLoading }) => {
-    const { title, span, author, album, time } = data
-
+const PlayListItem = ({ data, isLoading, trackPlay, setTrackPlay }) => {
+    const { album, author, duration_in_seconds:time, genre, id, logo, name: title, release_date, span, track_file } = data
+    
     return (
         <div className={style.item}>
             <div className={style.track}>
-                <Title isLoading={isLoading} title={title} span={span} />
+                <Title trackPlay={trackPlay} setTrackPlay={setTrackPlay} isLoading={isLoading} title={title} span={span} />
                 <Author isLoading={isLoading} author={author} />
                 <Album isLoading={isLoading} album={album} />
                 <TrackTime isLoading={isLoading} time={time} />
@@ -23,14 +23,21 @@ const PlayListItem = ({ data, isLoading }) => {
 }
 
 PlayListItem.propTypes = {
-    isLoading: PropTypes.bool.isRequired,
+    trackPlay: PropTypes.any, //todo
+    setTrackPlay: PropTypes.any, //todo
     data: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        span: PropTypes.string,
-        author: PropTypes.string.isRequired,
         album: PropTypes.string.isRequired,
-        time: PropTypes.string.isRequired
-    }).isRequired
+        author: PropTypes.string.isRequired,
+        duration_in_seconds: PropTypes.number.isRequired,
+        genre: PropTypes.string,
+        id: PropTypes.number,
+        logo: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        release_date: PropTypes.string,
+        track_file: PropTypes.string,
+        span: PropTypes.string,
+    }).isRequired,
+    isLoading: PropTypes.bool.isRequired,
 }
 
-export default PlayListItem;
+export default PlayListItem

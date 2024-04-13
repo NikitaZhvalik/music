@@ -9,10 +9,10 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 
 const RoutesApp = () => {
-    const [isAuthorized, setIsAuthorized] = useState(null)
+    const [isAuthorized, setIsAuthorized] = useState(Boolean(localStorage.getItem('user')))
 
     useEffect(() => {
-        setIsAuthorized(localStorage.getItem('user')!== null)
+        setIsAuthorized(localStorage.getItem('user') !== null)
     }, [])
 
     return (

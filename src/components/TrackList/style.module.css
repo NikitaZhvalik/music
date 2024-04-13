@@ -8,6 +8,10 @@
 }
 
 .content {
+    min-height: 300px;
+    max-height: 600px;
+    overflow: scroll;
+    padding-right: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
